@@ -311,15 +311,6 @@ function Contact() {
             Send Message
           </button>
         </form>
-        <p className="text-sm text-text-muted mt-4">
-          Or email me directly at{" "}
-          <a
-            href="mailto:dana@flowmade.io"
-            className="text-accent hover:text-accent-hover transition"
-          >
-            dana@flowmade.io
-          </a>
-        </p>
       </div>
     </section>
   );
@@ -328,16 +319,10 @@ function Contact() {
 function Footer() {
   return (
     <footer className="py-8 px-6 border-t border-surface-light/50">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="max-w-5xl mx-auto text-center">
         <p className="text-sm text-text-muted">
           &copy; {new Date().getFullYear()} FlowMade. All rights reserved.
         </p>
-        <a
-          href="mailto:dana@flowmade.io"
-          className="text-sm text-text-muted hover:text-text-bright transition"
-        >
-          dana@flowmade.io
-        </a>
       </div>
     </footer>
   );
