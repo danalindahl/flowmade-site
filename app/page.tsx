@@ -332,16 +332,12 @@ function Footer() {
         <p className="text-sm text-text-muted">
           &copy; {new Date().getFullYear()} FlowMade. All rights reserved.
         </p>
-        <div className="flex gap-6 text-sm text-text-muted">
-          <a
-            href="https://www.upwork.com/freelancers/~01f75da2ec9b49d31c"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-text-bright transition"
-          >
-            Upwork
-          </a>
-        </div>
+        <a
+          href="mailto:dana@flowmade.io"
+          className="text-sm text-text-muted hover:text-text-bright transition"
+        >
+          dana@flowmade.io
+        </a>
       </div>
     </footer>
   );
