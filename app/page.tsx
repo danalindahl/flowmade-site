@@ -1,3 +1,5 @@
+const CALENDLY_URL = "https://calendly.com/dana-flowmade/30min";
+
 export default function Home() {
   return (
     <>
@@ -35,10 +37,12 @@ function Nav() {
           </a>
         </div>
         <a
-          href="#contact"
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-accent hover:bg-accent-hover text-white text-sm font-medium px-4 py-2 rounded-lg transition"
         >
-          Get a Quote
+          Book a Call
         </a>
       </div>
     </nav>
@@ -53,18 +57,16 @@ function Hero() {
           Stop doing manually what a workflow can do in seconds.
         </h1>
         <p className="text-lg sm:text-xl text-text-muted mb-8 max-w-2xl mx-auto">
-          I build custom automations in{" "}
-          <span className="text-foreground font-medium">n8n</span> and{" "}
-          <span className="text-foreground font-medium">Make.com</span> for
-          agencies and service businesses. Fixed-price projects. Clear scope.
-          You get a working system, not a dependency on a freelancer.
+          I build custom automations for agencies and service businesses that
+          replace the manual work slowing you down. Fixed-price projects. Clear
+          scope. You get a working system, not a dependency on a freelancer.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
             className="bg-accent hover:bg-accent-hover text-white font-medium px-8 py-3 rounded-lg text-lg transition"
           >
-            Tell Me What You Need Automated
+            Book a Free Call
           </a>
           <a
             href="#what-i-build"
@@ -83,25 +85,21 @@ const services = [
     title: "Lead Capture → CRM → Follow-Up",
     description:
       "New lead comes in from a form, ad, or webhook. It hits your CRM tagged and sorted. A follow-up sequence fires automatically. You never touch it.",
-    tools: "Facebook Ads, GoHighLevel, HubSpot, Slack, Gmail",
   },
   {
     title: "Client Onboarding Workflows",
     description:
       "Intake forms, document collection, welcome emails, internal notifications, task creation — all triggered the moment a deal closes.",
-    tools: "Typeform, Google Drive, Notion, Slack, Asana",
   },
   {
     title: "Data Sync Between Tools",
     description:
       "Your CRM says one thing, your spreadsheet says another, and your invoicing tool has no idea. I connect them so data flows once and stays consistent.",
-    tools: "Google Sheets, Airtable, QuickBooks, Stripe, CRMs",
   },
   {
     title: "AI-Enhanced Workflows",
     description:
-      "Classify incoming emails. Summarize meeting notes. Extract data from documents. Route support tickets by intent. LLMs plugged into your existing processes.",
-    tools: "OpenAI, Claude, Gmail, Slack, Notion",
+      "Classify incoming emails. Summarize meeting notes. Extract data from documents. Route support tickets by intent. AI plugged into your existing processes.",
   },
 ];
 
@@ -125,13 +123,7 @@ function WhatIBuild() {
               <h3 className="text-xl font-semibold text-text-bright mb-3">
                 {service.title}
               </h3>
-              <p className="text-text-muted mb-4">{service.description}</p>
-              <p className="text-sm text-text-muted">
-                <span className="text-foreground font-medium">
-                  Common tools:
-                </span>{" "}
-                {service.tools}
-              </p>
+              <p className="text-text-muted">{service.description}</p>
             </div>
           ))}
         </div>
@@ -195,30 +187,34 @@ function About() {
         <h2 className="text-3xl font-bold text-text-bright text-center mb-8">
           Built by Someone Who Needed These Systems
         </h2>
-        <div className="space-y-4 text-text-muted text-lg">
-          <p>
-            I&apos;m Dana. I ran B2B service agencies for 14 years — a lead
-            generation agency and a podcast booking agency — before selling both
-            in 2026.
-          </p>
-          <p>
-            During that time, I built internal automations to handle the
-            operational work that was eating my team&apos;s time: lead routing,
-            CRM updates, client reporting, onboarding flows, outreach
-            sequencing. The kind of stuff that takes 20 minutes per client per
-            day and adds up fast.
-          </p>
-          <p>
-            Now I build those systems for other agencies and service businesses.
-            I work in{" "}
-            <span className="text-foreground font-medium">n8n</span> and{" "}
-            <span className="text-foreground font-medium">Make.com</span>. I
-            understand your business because I lived it.
-          </p>
-          <p className="text-foreground font-medium">
-            I&apos;ll tell you upfront if something is or isn&apos;t worth
-            automating.
-          </p>
+        <div className="flex flex-col md:flex-row gap-8 items-start">
+          <img
+            src="/dana-headshot.jpeg"
+            alt="Dana Lindahl"
+            className="w-32 h-32 rounded-xl object-cover shrink-0 mx-auto md:mx-0"
+          />
+          <div className="space-y-4 text-text-muted text-lg">
+            <p>
+              I&apos;m Dana. I ran B2B service agencies for 14 years — a lead
+              generation agency and a podcast booking agency — before selling
+              both in 2026.
+            </p>
+            <p>
+              During that time, I built internal automations to handle the
+              operational work that was eating my team&apos;s time: lead
+              routing, CRM updates, client reporting, onboarding flows,
+              outreach sequencing. The kind of stuff that takes 20 minutes per
+              client per day and adds up fast.
+            </p>
+            <p>
+              Now I build those systems for other agencies and service
+              businesses. I understand your business because I lived it.
+            </p>
+            <p className="text-foreground font-medium">
+              I&apos;ll tell you upfront if something is or isn&apos;t worth
+              automating.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -233,16 +229,25 @@ function Testimonials() {
           What Clients Say
         </h2>
         <div className="bg-surface border border-surface-light rounded-xl p-8">
-          <blockquote className="text-lg text-text-muted italic mb-4">
-            &ldquo;Dana and his team did a great job on optimizing my LinkedIn
-            profile and beginning outreach. I already am working on a few
-            potential deals he helped to line up.&rdquo;
+          <blockquote className="text-lg text-text-muted italic mb-6">
+            &ldquo;Great experience working with Dana on a marketing ops
+            automation project. He scoped exactly what I needed and pointed out
+            details I was missing. Delivered within days, and everything works
+            flawlessly. I&apos;ve known him for several years and always learn
+            something new when I engage with him. Highly recommend.&rdquo;
           </blockquote>
-          <p className="text-sm text-text-muted">— Upwork Client, 5-Star Review</p>
+          <div className="flex items-center justify-center gap-3">
+            <img
+              src="/joe-dejene.jpg"
+              alt="Joe Dejene"
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <div className="text-left">
+              <p className="text-sm font-medium text-text-bright">Joe Dejene</p>
+              <p className="text-sm text-text-muted">DuckWeed Media</p>
+            </div>
+          </div>
         </div>
-        <p className="text-text-muted mt-8 text-sm">
-          More testimonials coming as automation projects are completed.
-        </p>
       </div>
     </section>
   );
@@ -251,7 +256,7 @@ function Testimonials() {
 function Contact() {
   return (
     <section id="contact" className="py-20 px-6 bg-surface/50">
-      <div className="max-w-xl mx-auto text-center">
+      <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-text-bright mb-4">
           Let&apos;s Talk About What You Need
         </h2>
@@ -259,58 +264,14 @@ function Contact() {
           Tell me what&apos;s eating your time. I&apos;ll tell you if it&apos;s
           worth automating and what it would cost.
         </p>
-        <form
-          action="https://formspree.io/f/placeholder"
-          method="POST"
-          className="space-y-4 text-left"
+        <a
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-accent hover:bg-accent-hover text-white font-medium px-8 py-4 rounded-lg text-lg transition"
         >
-          <div>
-            <label htmlFor="name" className="block text-sm text-text-muted mb-1">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="w-full bg-surface border border-surface-light rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm text-text-muted mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              className="w-full bg-surface border border-surface-light rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm text-text-muted mb-1"
-            >
-              What do you need automated?
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              required
-              placeholder="e.g., 'New leads from Facebook Ads need to get into our CRM with the right tags and trigger a follow-up sequence automatically.'"
-              className="w-full bg-surface border border-surface-light rounded-lg px-4 py-3 text-foreground placeholder:text-text-muted/50 focus:outline-none focus:border-accent transition resize-none"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-accent hover:bg-accent-hover text-white font-medium py-3 rounded-lg text-lg transition"
-          >
-            Send Message
-          </button>
-        </form>
+          Book a Free 30-Minute Call
+        </a>
       </div>
     </section>
   );
