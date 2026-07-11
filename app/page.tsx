@@ -58,8 +58,10 @@ function Hero() {
         </h1>
         <p className="text-lg sm:text-xl text-text-muted mb-8 max-w-2xl mx-auto">
           I build custom automations for agencies and service businesses that
-          replace the manual work slowing you down. Fixed-price projects. Clear
-          scope. You get a working system, not a dependency on a freelancer.
+          take the recurring busywork off your team&apos;s plate: client
+          reporting, onboarding, status updates, chasing invoices. You get
+          working systems in the tools you already use, not a dependency on a
+          freelancer.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -111,8 +113,10 @@ function WhatIBuild() {
           What I Build
         </h2>
         <p className="text-text-muted text-center mb-12 max-w-2xl mx-auto">
-          Every project is scoped, quoted, and delivered as a working system
-          with documentation. No retainers. No ongoing dependency.
+          Every build is scoped and delivered as a working system with
+          documentation. You own everything I build: some clients run it
+          themselves, most keep me on to maintain and extend it as their tools
+          change.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service) => (
@@ -143,7 +147,7 @@ const steps = [
     number: "02",
     title: "I scope it and quote it",
     description:
-      "You get a fixed price, a clear description of what gets built, and a timeline. Usually 3-7 business days. No surprises.",
+      "You get a clear description of what gets built, what it costs, and a timeline. Usually 3-7 business days. No surprises.",
   },
   {
     number: "03",
@@ -195,9 +199,9 @@ function About() {
           />
           <div className="space-y-4 text-text-muted text-lg">
             <p>
-              I&apos;m Dana. I ran B2B service agencies for 14 years — a lead
-              generation agency and a podcast booking agency — before selling
-              both in 2026.
+              I&apos;m Dana. I spent 14 years running B2B service agencies
+              (lead generation, then podcast booking) before selling the
+              business in January 2026.
             </p>
             <p>
               During that time, I built internal automations to handle the
@@ -272,6 +276,16 @@ function Contact() {
         >
           Book a Free 30-Minute Call
         </a>
+        <p className="text-text-muted text-sm mt-6">
+          Not ready for a call? Email what&apos;s eating your time to{" "}
+          <a
+            href="mailto:dana@flowmade.io"
+            className="text-text-bright underline hover:text-accent transition"
+          >
+            dana@flowmade.io
+          </a>{" "}
+          and I&apos;ll tell you straight whether it&apos;s worth automating.
+        </p>
       </div>
     </section>
   );
