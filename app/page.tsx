@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <WhatIBuild />
+      <Services />
       <HowItWorks />
       <About />
       <Testimonials />
@@ -23,8 +23,8 @@ function Nav() {
           FlowMade
         </a>
         <div className="hidden sm:flex gap-6 text-sm text-text-muted">
-          <a href="#what-i-build" className="hover:text-text-bright transition">
-            What I Build
+          <a href="#services" className="hover:text-text-bright transition">
+            Services
           </a>
           <a href="#how-it-works" className="hover:text-text-bright transition">
             How It Works
@@ -54,14 +54,12 @@ function Hero() {
     <section className="pt-32 pb-20 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl font-bold text-text-bright leading-tight mb-6">
-          Stop doing manually what a workflow can do in seconds.
+          The systems behind your sales.
         </h1>
         <p className="text-lg sm:text-xl text-text-muted mb-8 max-w-2xl mx-auto">
-          I build custom automations for agencies and service businesses that
-          take the recurring busywork off your team&apos;s plate: client
-          reporting, onboarding, status updates, chasing invoices. You get
-          working systems in the tools you already use, not a dependency on a
-          freelancer.
+          Outbound that fills your pipeline with qualified sales calls, plus the
+          automation that runs everything behind it: follow-up, CRM, onboarding,
+          reporting. More customers, and a back office that runs itself.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -71,10 +69,10 @@ function Hero() {
             Book a Free Call
           </a>
           <a
-            href="#what-i-build"
+            href="#services"
             className="border border-surface-light hover:border-text-muted text-text-muted hover:text-text-bright font-medium px-8 py-3 rounded-lg text-lg transition"
           >
-            See What I Build
+            See What You Get
           </a>
         </div>
       </div>
@@ -84,50 +82,71 @@ function Hero() {
 
 const services = [
   {
-    title: "Lead Capture → CRM → Follow-Up",
+    tag: "Outbound",
+    title: "Qualified sales calls, booked for you",
     description:
-      "New lead comes in from a form, ad, or webhook. It hits your CRM tagged and sorted. A follow-up sequence fires automatically. You never touch it.",
+      "A done-for-you outbound engine that puts qualified meetings on your calendar without hiring an SDR. Infrastructure, targeting, copy, deliverability, and every reply: handled.",
+    points: [
+      "Pre-warmed sending domains and inboxes",
+      "A targeted list of the people you actually want to reach",
+      "Fresh, tested copy every week",
+      "Every reply worked, calls booked onto your calendar",
+    ],
+    note: "Performance-based: you pay per booked meeting, not for activity.",
   },
   {
-    title: "Client Onboarding Workflows",
+    tag: "Automation & AI",
+    title: "A back office that runs itself",
     description:
-      "Intake forms, document collection, welcome emails, internal notifications, task creation — all triggered the moment a deal closes.",
-  },
-  {
-    title: "Data Sync Between Tools",
-    description:
-      "Your CRM says one thing, your spreadsheet says another, and your invoicing tool has no idea. I connect them so data flows once and stays consistent.",
-  },
-  {
-    title: "AI-Enhanced Workflows",
-    description:
-      "Classify incoming emails. Summarize meeting notes. Extract data from documents. Route support tickets by intent. AI plugged into your existing processes.",
+      "The leads you already have stop slipping through the cracks. The manual work behind your sales and marketing gets automated, so your team stops doing by hand what a system does in seconds.",
+    points: [
+      "Lead capture to CRM to automatic follow-up",
+      "Client onboarding triggered the moment a deal closes",
+      "Your tools kept in sync so data stays consistent",
+      "AI steps: classify, summarize, extract, route",
+    ],
+    note: "Working systems you own, with documentation.",
   },
 ];
 
-function WhatIBuild() {
+function Services() {
   return (
-    <section id="what-i-build" className="py-20 px-6 bg-surface/50">
+    <section id="services" className="py-20 px-6 bg-surface/50">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-text-bright text-center mb-4">
-          What I Build
+          Fill Your Pipeline, Then Run It
         </h2>
         <p className="text-text-muted text-center mb-12 max-w-2xl mx-auto">
-          Every build is scoped and delivered as a working system with
-          documentation. You own everything I build: some clients run it
-          themselves, most keep me on to maintain and extend it as their tools
-          change.
+          Most clients start with outbound to fill the pipeline, then automate
+          the operation behind it. Start with either.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-surface border border-surface-light rounded-xl p-6 hover:border-accent/50 transition"
+              className="bg-surface border border-surface-light rounded-xl p-8 hover:border-accent/50 transition flex flex-col"
             >
+              <span className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
+                {service.tag}
+              </span>
               <h3 className="text-xl font-semibold text-text-bright mb-3">
                 {service.title}
               </h3>
-              <p className="text-text-muted">{service.description}</p>
+              <p className="text-text-muted mb-5">{service.description}</p>
+              <ul className="space-y-2 mb-6">
+                {service.points.map((point) => (
+                  <li
+                    key={point}
+                    className="text-text-muted flex gap-2 items-start"
+                  >
+                    <span className="text-accent shrink-0">&rarr;</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-foreground font-medium mt-auto pt-4 border-t border-surface-light">
+                {service.note}
+              </p>
             </div>
           ))}
         </div>
@@ -139,21 +158,21 @@ function WhatIBuild() {
 const steps = [
   {
     number: "01",
-    title: "You tell me what's broken",
+    title: "Find where the revenue is leaking",
     description:
-      "A quick call or message. What's eating your time? What keeps falling through the cracks? No jargon needed — just tell me the problem.",
+      "A quick call pinpoints it: either not enough sales conversations, or leaks in the ones already coming in. Usually both.",
   },
   {
     number: "02",
-    title: "I scope it and quote it",
+    title: "Get a clear scope and price",
     description:
-      "You get a clear description of what gets built, what it costs, and a timeline. Usually 3-7 business days. No surprises.",
+      "Outbound, back-office automation, or both. A clear scope, a clear price, and a timeline before anything starts.",
   },
   {
     number: "03",
-    title: "I build it and hand it off",
+    title: "It runs",
     description:
-      "You get a working system with documentation. I walk you through it. You own it and run it without me. If something's off, I fix it.",
+      "Meetings land on your calendar and your systems run in the background. On the outbound side, you only pay when a meeting is booked.",
   },
 ];
 
@@ -189,7 +208,7 @@ function About() {
     <section id="about" className="py-20 px-6 bg-surface/50">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-text-bright text-center mb-8">
-          Built by Someone Who Needed These Systems
+          Built by Someone Who Ran the Playbook
         </h2>
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <img
@@ -199,24 +218,24 @@ function About() {
           />
           <div className="space-y-4 text-text-muted text-lg">
             <p>
-              I&apos;m Dana. I spent 14 years running B2B service agencies
-              (lead generation, then podcast booking) before selling the
-              business in January 2026.
+              I&apos;m Dana. I spent 14 years running B2B service agencies,
+              including years in lead generation, before selling the business
+              in January 2026.
             </p>
             <p>
-              During that time, I built internal automations to handle the
-              operational work that was eating my team&apos;s time: lead
-              routing, CRM updates, client reporting, onboarding flows,
-              outreach sequencing. The kind of stuff that takes 20 minutes per
-              client per day and adds up fast.
+              That means both sides of what FlowMade sells were built and run in
+              a real business first: the outbound systems that put meetings on
+              the calendar, and the automations that handled the operational
+              work eating a team&apos;s time. Lead routing, CRM updates,
+              reporting, onboarding, follow-up. The work that quietly takes 20
+              minutes per client per day and adds up fast.
             </p>
             <p>
-              Now I build those systems for other agencies and service
-              businesses. I understand your business because I lived it.
+              FlowMade does both for other agencies and service businesses, from
+              someone who understands your business because he ran one.
             </p>
             <p className="text-foreground font-medium">
-              I&apos;ll tell you upfront if something is or isn&apos;t worth
-              automating.
+              You&apos;ll get told straight if something isn&apos;t worth doing.
             </p>
           </div>
         </div>
@@ -234,11 +253,12 @@ function Testimonials() {
         </h2>
         <div className="bg-surface border border-surface-light rounded-xl p-8">
           <blockquote className="text-lg text-text-muted italic mb-6">
-            &ldquo;Great experience working with Dana on a marketing ops
-            automation project. He scoped exactly what I needed and pointed out
-            details I was missing. Delivered within days, and everything works
-            flawlessly. I&apos;ve known him for several years and always learn
-            something new when I engage with him. Highly recommend.&rdquo;
+            &ldquo;Dana has handled both sides of my growth. His cold email
+            system booked me 12 qualified sales calls in the first 30 days, and
+            he automated the marketing ops behind it so none of them slipped
+            through the cracks. He scoped exactly what I needed, delivered within
+            days, and everything works. I&apos;ve known him for years and always
+            learn something new when I work with him. Highly recommend.&rdquo;
           </blockquote>
           <div className="flex items-center justify-center gap-3">
             <img
@@ -262,11 +282,12 @@ function Contact() {
     <section id="contact" className="py-20 px-6 bg-surface/50">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-text-bright mb-4">
-          Let&apos;s Talk About What You Need
+          Let&apos;s Talk About Where You&apos;re Losing Revenue
         </h2>
         <p className="text-text-muted mb-8">
-          Tell me what&apos;s eating your time. I&apos;ll tell you if it&apos;s
-          worth automating and what it would cost.
+          One call tells you whether the gap is too few sales conversations, too
+          much leakage in the ones you have, or both, and exactly what&apos;s
+          worth building.
         </p>
         <a
           href={CALENDLY_URL}
@@ -277,14 +298,14 @@ function Contact() {
           Book a Free 30-Minute Call
         </a>
         <p className="text-text-muted text-sm mt-6">
-          Not ready for a call? Email what&apos;s eating your time to{" "}
+          Not ready for a call? Email{" "}
           <a
             href="mailto:dana@flowmade.io"
             className="text-text-bright underline hover:text-accent transition"
           >
             dana@flowmade.io
           </a>{" "}
-          and I&apos;ll tell you straight whether it&apos;s worth automating.
+          with where you&apos;re losing revenue.
         </p>
       </div>
     </section>
