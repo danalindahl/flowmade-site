@@ -54,14 +54,13 @@ function Hero() {
     <section className="pt-32 pb-20 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl font-bold text-text-bright leading-tight mb-6">
-          Stop doing manually what a workflow can do in seconds.
+          The leads you pay for stop getting worked the moment your team gets
+          busy.
         </h1>
         <p className="text-lg sm:text-xl text-text-muted mb-8 max-w-2xl mx-auto">
-          I build custom automations for agencies and service businesses that
-          take the recurring busywork off your team&apos;s plate: client
-          reporting, onboarding, status updates, chasing invoices. You get
-          working systems in the tools you already use, not a dependency on a
-          freelancer.
+          When your team gets busy, follow-up slips and the leads you already
+          paid for go cold. I build and run a system that works every one to
+          completion, so nothing gets dropped and your people stay on closing.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -84,24 +83,24 @@ function Hero() {
 
 const services = [
   {
-    title: "Lead Capture → CRM → Follow-Up",
+    title: "Every lead worked to completion",
     description:
-      "New lead comes in from a form, ad, or webhook. It hits your CRM tagged and sorted. A follow-up sequence fires automatically. You never touch it.",
+      "New leads get logged and followed up on a set schedule, chased until they answer or go dead. No lead slips because someone forgot.",
   },
   {
-    title: "Client Onboarding Workflows",
+    title: "Your team stays on the closing",
     description:
-      "Intake forms, document collection, welcome emails, internal notifications, task creation — all triggered the moment a deal closes.",
+      "The system handles the chasing and the admin. Your people spend their time on the conversations that are actually ready to buy, not digging through a CRM.",
   },
   {
-    title: "Data Sync Between Tools",
+    title: "The system does the busywork, your people do the talking",
     description:
-      "Your CRM says one thing, your spreadsheet says another, and your invoicing tool has no idea. I connect them so data flows once and stays consistent.",
+      "It handles the drafts, the reminders, and the record-keeping in the background. Your leads still talk to a real person on your team.",
   },
   {
-    title: "AI-Enhanced Workflows",
+    title: "You see exactly what it's doing",
     description:
-      "Classify incoming emails. Summarize meeting notes. Extract data from documents. Route support tickets by intent. AI plugged into your existing processes.",
+      "A monthly report: leads worked, follow-ups sent, cold ones revived, and how fast each one got a response. You always know what you're paying for.",
   },
 ];
 
@@ -113,10 +112,10 @@ function WhatIBuild() {
           What I Build
         </h2>
         <p className="text-text-muted text-center mb-12 max-w-2xl mx-auto">
-          Every build is scoped and delivered as a working system with
-          documentation. You own everything I build: some clients run it
-          themselves, most keep me on to maintain and extend it as their tools
-          change.
+          It&apos;s one system, built on the tools you already use and set up
+          around how your team sells. I build it, run it, and keep it working
+          as your business changes. You get the results and the reporting, not
+          another thing to manage.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service) => (
@@ -139,21 +138,21 @@ function WhatIBuild() {
 const steps = [
   {
     number: "01",
-    title: "You tell me what's broken",
+    title: "We find the leak",
     description:
-      "A quick call or message. What's eating your time? What keeps falling through the cracks? No jargon needed — just tell me the problem.",
+      "A short call. Where do leads come into your business, who is supposed to work them, and where do they go cold? The gap is usually obvious within a few minutes.",
   },
   {
     number: "02",
-    title: "I scope it and quote it",
+    title: "I build and launch it",
     description:
-      "You get a clear description of what gets built, what it costs, and a timeline. Usually 3-7 business days. No surprises.",
+      "I stand the system up on your CRM and inbox and get it live in your business. One flat setup fee, no long build cycle.",
   },
   {
     number: "03",
-    title: "I build it and hand it off",
+    title: "I run it, and you see the results",
     description:
-      "You get a working system with documentation. I walk you through it. You own it and run it without me. If something's off, I fix it.",
+      "Once it is live, I keep it running, tune it against what is actually converting, and send you the numbers every month. The monthly fee does not start until the system is live and working in your business.",
   },
 ];
 
@@ -189,7 +188,7 @@ function About() {
     <section id="about" className="py-20 px-6 bg-surface/50">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-text-bright text-center mb-8">
-          Built by Someone Who Needed These Systems
+          Built by Someone Who Ran the Business
         </h2>
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <img
@@ -204,19 +203,15 @@ function About() {
               business in January 2026.
             </p>
             <p>
-              During that time, I built internal automations to handle the
-              operational work that was eating my team&apos;s time: lead
-              routing, CRM updates, client reporting, onboarding flows,
-              outreach sequencing. The kind of stuff that takes 20 minutes per
-              client per day and adds up fast.
+              I know exactly what it feels like to pay for leads and then watch
+              them slip because everyone is busy doing the actual work. I built
+              systems to fix that inside my own business: lead routing, CRM
+              updates, follow-up sequencing, reporting. The boring stuff that
+              decides whether the leads you paid for turn into money.
             </p>
             <p>
-              Now I build those systems for other agencies and service
+              Now I build and run those systems for other agencies and service
               businesses. I understand your business because I lived it.
-            </p>
-            <p className="text-foreground font-medium">
-              I&apos;ll tell you upfront if something is or isn&apos;t worth
-              automating.
             </p>
           </div>
         </div>
@@ -234,11 +229,12 @@ function Testimonials() {
         </h2>
         <div className="bg-surface border border-surface-light rounded-xl p-8">
           <blockquote className="text-lg text-text-muted italic mb-6">
-            &ldquo;Great experience working with Dana on a marketing ops
-            automation project. He scoped exactly what I needed and pointed out
-            details I was missing. Delivered within days, and everything works
-            flawlessly. I&apos;ve known him for several years and always learn
-            something new when I engage with him. Highly recommend.&rdquo;
+            &ldquo;Dana scoped exactly what I needed, caught a couple of things
+            I&apos;d completely missed, and had it built and running within
+            days. And he doesn&apos;t just hand it off and disappear, it
+            actually keeps working. I&apos;ve known him for years and I still
+            learn something every time we talk. If leads are slipping through
+            the cracks in your business, talk to him.&rdquo;
           </blockquote>
           <div className="flex items-center justify-center gap-3">
             <img
@@ -262,11 +258,11 @@ function Contact() {
     <section id="contact" className="py-20 px-6 bg-surface/50">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-text-bright mb-4">
-          Let&apos;s Talk About What You Need
+          Let&apos;s Find Out Where You&apos;re Leaking
         </h2>
         <p className="text-text-muted mb-8">
-          Tell me what&apos;s eating your time. I&apos;ll tell you if it&apos;s
-          worth automating and what it would cost.
+          Tell me how leads come into your business today. I&apos;ll show you
+          where they&apos;re going cold and what it would take to fix it.
         </p>
         <a
           href={CALENDLY_URL}
@@ -277,14 +273,15 @@ function Contact() {
           Book a Free 30-Minute Call
         </a>
         <p className="text-text-muted text-sm mt-6">
-          Not ready for a call? Email what&apos;s eating your time to{" "}
+          Not ready for a call? Email me at{" "}
           <a
             href="mailto:dana@flowmade.io"
             className="text-text-bright underline hover:text-accent transition"
           >
             dana@flowmade.io
           </a>{" "}
-          and I&apos;ll tell you straight whether it&apos;s worth automating.
+          and tell me how leads come in today. I&apos;ll tell you straight where
+          they&apos;re leaking.
         </p>
       </div>
     </section>

@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FlowMade — Custom Automation Builds for Agencies & Service Businesses",
+  title: "FlowMade: Make Sure the Leads You Pay For Actually Get Worked",
   description:
-    "I build automated workflows in n8n and Make.com that replace the manual processes slowing your business down. Fixed-price projects, clear scope, fast turnaround.",
+    "I build service businesses a system that follows up every lead to completion and I run it for you, so the leads you already pay for stop going cold when your team gets busy.",
   openGraph: {
-    title: "FlowMade — Custom Automation Builds",
+    title: "FlowMade: The System Behind Your Follow-Up",
     description:
-      "Automated workflows for agencies and service businesses. Built by someone who ran one for 14 years.",
+      "Built and run for you by someone who ran a service agency for 14 years.",
     url: "https://flowmade.io",
     siteName: "FlowMade",
     type: "website",
