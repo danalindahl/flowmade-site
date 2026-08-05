@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FlowMade: The System Behind Your Follow-Up",
     description:
-      "Built and run for you by someone who ran a service agency for 14 years.",
+      "The leads you already pay for actually get worked. I build the system and run it for you.",
     url: "https://flowmade.io",
     siteName: "FlowMade",
     type: "website",
